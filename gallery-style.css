@@ -1,0 +1,124 @@
+
+
+.container {
+    
+    display:grid;
+    /*text-align: center;*/
+    height: 600px;
+    width: 1200px;
+    grid-gap: 3px;
+    padding: 10px;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "header header side nav"
+    "footer1 introduction main nav"
+    "footer1 footer2 footer footer";
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+/* iPad (up to 768px)*/
+@media (max-width:768px) {
+.container{
+  color: antiquewhite;
+  width:100%;
+  padding: 2px;
+}
+/* iPhone 5/SE (up to 320px)*/
+@media (max-width: 320px) {
+    .container{
+        background-color:azure;
+        width:100%;
+        padding:2px;
+    }
+
+}
+}
+.header,main,nav,footer{
+    height: auto;
+    width: auto;
+    position: relative;
+}
+.side,introduction,footer1{
+    height: auto;
+    width: auto;
+    position: relative;
+}
+.header {
+    grid-area: header;
+    
+    background-image: url("assets/header.webp");
+    max-width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+        background-position: center center;
+}
+.main {
+    grid-area: main;
+    background-color: rgb(119, 120, 219);
+    background-image: url("assets/main.jpg");
+   
+    max-width: 100%;
+    max-width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+}
+.nav {
+    grid-area: nav;
+    background-image: url("assets/nav2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    max-width: 100%;
+}
+.side {
+    grid-area: side;
+    background-image: url("assets/side.jpg");
+    max-width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+        background-position: center center;
+
+}
+.introduction{
+    grid-area: introduction;
+    background-color: rgb(146, 23, 29);
+    background-image: url("assets/Cat-Loving-Dog (1).jpg");
+    max-width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(119, 228, 166);
+    background-image: url("assets/mainFooter.jpg");
+    max-width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+        background-position: center center;
+   
+    
+}
+.footer1{
+    grid-area: footer1;
+    background-image: url("assets/footer1.jpg");
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+        background-position: center center;
+    
+}
+.footer2{
+    grid-area: footer2;
+    background-image: url("assets/footer2.jpg");
+    max-width: 100%;
+    max-width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    
+}

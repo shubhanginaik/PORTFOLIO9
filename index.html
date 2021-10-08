@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <div class="main-nav"> 
+
+                <div class="logo"><h1>Shubhangi Naik</h1></div>
+                <nav class="topnav" id="myTopnav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about-me">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="javascript:void(0);" onclick="showGallery()"> Gallery</a></li>
+                        <li><a href="#contact-me">Contact me</a></li>
+                        <li><a href="https://en.bc.fi/" target="_blank">More about BCH</a></li>
+                        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <iframe id="gallery-frame" src="./gallery.html" frameborder="0" scrolling="no"></iframe>
+                <div class="hero-banner" id="heroBanner">
+                    <h2> welcome to porfolio</h2>
+                    <div class="hero-image"><img src="./assets/shubhangi.jpeg" alt="SRN"></div>
+                </div>
+       </div>
+    
+    
+        <div class="container">
+        <section id="projects">
+            <div class="project-head"><h3>Projects</h4></div>
+        <div class="row">
+            <div class="column">
+            <div id="card">
+                <img src="assets/to-do-list.jpg" alt="Todo list">
+                <h4>Todo List</h4>
+                <p>Technologies: vanilla js, DOM objects.</p>
+            </div>
+            </div>
+            <div class="column">
+            <div id="card">
+                <img src="assets/recipe.jpg" alt="Recipe">
+                <h4>Recipe App</h4>
+                <p>Technologies:HTML,CSS and inline JS</p>
+            </div>
+        </div>
+        <div class="column">
+            <div id="card">
+                <img src="assets/project3.jpg" alt="CalorieMeter">
+                <h4>Food Tracker App</h4>
+                <p>Technologies: JS,HTML,CSS</p>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+    <div class="container">
+        <section id="about-me">
+            <h4>About Me</h4>
+            
+                <img src="https://unsplash.com/photos/TamMbr4okv4" alt="About me">
+                <h4>Hei,I'm Shubhangi Naik</h4>
+                <p>I'm a web developer with a focus on the MERN stack, but still exploring other technologies and frameworks that catch my interest! if you're looking for a developer to add to your team, I'd love to hear from you!</p>
+            
+        </section>
+    </div>
+        <div class="container">
+        <section id="skills">
+            <h4>Skills</h4>
+            <div class="content">
+            
+                <img src="abstract-background-with-faint-color_23-2147835813.JPEG" alt="some icon">
+                <h4>heading</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime dignissimos, mollitia, nostrum iste quaerat suscipit rem enim veritatis tenetur ad voluptate, fugit aut molestias consectetur qui itaque quos voluptatum.</p>
+        </div>
+        </section>
+    </div>
+    <div class="container">
+        <footer>
+            <section id="contact-me">
+            <div class="flex-form">
+            <form action="" name="contact-me-form">
+                <div class="form-name"><h3>Contact Me</h3></div>
+                <label for="yourName">Your name:</label>
+                <input type="text" name="yourName" class="yourName" maxlength="32"><br>
+                <label for="email">Your email:</label>
+                <input type="text" name="email" class="email"><br>
+                <label for="message">Your message:</label>
+                <input type="text" name="message" class="message" maxlength="160"><br>
+                <button value="send-message" type="submit" class="send-message">SEND MESSAGE</button>
+                <p class="smaller">
+                    Copyright © My Website 2021
+                </p>
+
+        <div class="down-below">
+            <ul class="links">
+                <li>
+                    <a href="https://www.linkedin.com/in/shubhangi-naik-5300136a/">
+                    <i class="fa  fa-linkedIn-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+
+            </form>
+        </div>
+    </section>
+        </footer>
+    </div>
+    </main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+function render(){
+        var heroBanner = document.getElementById('heroBanner');
+        var frame = document.getElementById('gallery-frame');
+        frame.style.display='none';
+        heroBanner.style.display='flex';
+
+        }
+        //show frames from gallery
+function showGallery(){
+var heroBanner = document.getElementById('heroBanner');
+var frame = document.getElementById('gallery-frame');
+heroBanner.style.display='none';
+frame.style.display='grid';
+}
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+//scroll topfunction code
+var myButton=document.getElementById('myBtn');
+    // when the user scrolls down 20px from top of the document ,show the button.
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction(){
+        if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+            myButton.style.display='block';
+        }
+        else{
+            myButton.style.display='none';
+        }
+    }
+function topFunction(){
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0; 
+}
+
+    </script>
+</body>
+</html>
